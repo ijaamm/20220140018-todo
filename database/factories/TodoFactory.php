@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Todo>
@@ -19,7 +20,7 @@ class TodoFactory extends Factory
         return [
             'user_id' => rand(1, 100),
             'title' => ucwords(fake()->sentence()),
-            'is_done' => rand(0,1),
+            'is_done' => rand(0, 1),
         ];
     }
 }
